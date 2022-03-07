@@ -252,7 +252,11 @@ body {
   color: #084b6d;
 }
 
-h1, h2, h3, h4, blockquote {
+h1,
+h2,
+h3,
+h4,
+blockquote {
   font-family: "Young Serif";
   font-weight: normal;
   color: #084b6d;
@@ -324,7 +328,10 @@ p.newsletterCopy {
   font-size: 0.8rem;
 }
 
-ul, li, a, input {
+ul,
+li,
+a,
+input {
   padding: 0;
   margin: 0;
 }
@@ -402,4 +409,10 @@ button.menuIcon:hover {
 }
 button.menuIcon:focus {
   background-color: transparent;
+}
+
+.announcements {
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid rgba(8, 75, 109, 0.08);
 }
