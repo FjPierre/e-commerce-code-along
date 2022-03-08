@@ -21,6 +21,7 @@
   .searchCart {
     display: flex;
     align-items: center;
+
     .searchCart,
     .bagIcon {
       margin-right: 15px;
@@ -36,6 +37,9 @@
   }
 
   .counter {
+    display: flex;
+    align-items: center;
+
     p {
       width: 24px;
       height: 24px;
