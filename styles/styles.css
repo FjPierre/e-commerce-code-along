@@ -469,20 +469,23 @@ button.menuIcon:focus {
   text-align: center;
   border-radius: 50%;
 }
-.navBar input[type=checkbox] {
+
+input[type=checkbox] {
   opacity: 0;
   position: absolute;
 }
-.navBar input[type=checkbox]:checked ~ .slideOutNav {
+input[type=checkbox]:checked ~ .slideOutNav {
   left: 0;
 }
-.navBar input[type=checkbox]:focus + label {
+input[type=checkbox]:focus + label {
   border: 1px dotted #084b6d;
 }
-.navBar label {
+
+label {
   cursor: pointer;
 }
-.navBar .slideOutNav {
+
+.slideOutNav {
   padding: 35px 50px;
   width: 100%;
   max-width: 506px;
@@ -504,7 +507,7 @@ button.menuIcon:focus {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.navBar .slideOutNav .buttonContainer {
+.slideOutNav .buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,38 +515,38 @@ button.menuIcon:focus {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.navBar .slideOutNav .buttonContainer button {
+.slideOutNav .buttonContainer button {
   color: #fff;
   background-color: transparent;
   font-size: 1.2rem;
   font-family: "Jakarta Sans";
   padding: 10px 0 10px 20px;
 }
-.navBar .slideOutNav hr {
+.slideOutNav hr {
   width: 24px;
   height: 2px;
   margin: 36px 0;
   background-color: #fff;
   border: none;
 }
-.navBar .slideOutNav .mainMenu {
+.slideOutNav .mainMenu {
   font-family: "Young Serif";
   font-size: 1.6rem;
   line-height: 2.5rem;
 }
-.navBar .slideOutNav .mainMenu a:hover, .navBar .slideOutNav .mainMenu a:focus {
+.slideOutNav .mainMenu a:hover, .slideOutNav .mainMenu a:focus {
   color: rgba(255, 255, 255, 0.5);
 }
-.navBar .slideOutNav .legal {
+.slideOutNav .legal {
   font-family: "Jakarta Sans";
   font-size: 0.8rem;
   font-weight: bold;
   line-height: 1.5rem;
 }
-.navBar .slideOutNav .legal a {
+.slideOutNav .legal a {
   color: rgba(255, 255, 255, 0.5);
 }
-.navBar .slideOutNav .legal a:hover, .navBar .slideOutNav .legal a:focus {
+.slideOutNav .legal a:hover, .slideOutNav .legal a:focus {
   color: white;
 }
 
@@ -572,6 +575,35 @@ header .headerContent {
 header .contentContainer {
   width: 65%;
   margin: 0 auto;
+}
+
+.contactHeader {
+  background-color: #fff5f5;
+  padding-top: 120px;
+}
+.contactHeader .contactContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 50px;
+}
+
+.contactHeader::after {
+  content: "";
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/wave.svg);
+  background-color: #fff5f5;
+  background-repeat: no-repeat;
+  background-size: 100% 150px;
 }
 
 footer {
@@ -682,6 +714,109 @@ footer .social a:hover, footer .social a:focus {
   display: block;
 }
 
+.mapFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mapFormContainer .map {
+  width: 50%;
+}
+.mapFormContainer .map iframe {
+  width: 100%;
+}
+
+.contactForm {
+  width: calc(50% - 70px);
+  margin-left: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 0 0 10px 5px;
+  border: none;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: "Jakarta Sans";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+input::placeholder,
+textarea::placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+
+input {
+  border-bottom: 1px solid #eee;
+}
+
+textarea {
+  min-height: 130px;
+  border: 1px solid #eee;
+  border-top: none;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Jakarta Sans";
+  color: #084b6d;
+  padding: 0 0 10px 0;
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  background-image: url(../assets/caret-down-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 95% center;
+}
+
+option {
+  font-family: "Jakarta Sans";
+}
+
 @media (max-width: 1000px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
   footer .footerFlexContainer {
@@ -704,11 +839,38 @@ footer .social a:hover, footer .social a:focus {
   footer .footerNav nav ul {
     width: auto;
   }
+
+  .mapFormContainer .map {
+    width: 45%;
+  }
+
+  .contactForm {
+    width: calc(55% - 50px);
+    margin-left: 50px;
+  }
 }
 @media (max-width: 800px) {
   /* all of our styles for TABLET devices will go within this breakpoin */
   footer .newsletter {
     width: 70%;
+  }
+
+  .mapFormContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mapFormContainer .map {
+    margin-bottom: 50px;
+    width: 85%;
+  }
+  .mapFormContainer .contactForm {
+    width: 85%;
+    margin-left: 0;
   }
 }
 @media (max-width: 500px) {
@@ -750,5 +912,9 @@ footer .social a:hover, footer .social a:focus {
   }
   footer .socialIcons {
     margin-bottom: 30px;
+  }
+
+  .mapFormContainer .map {
+    width: 100%;
   }
 }
